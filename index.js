@@ -21,7 +21,7 @@ app.get("/calculate/:number1/:number2/:operation", (req, res, next) => {
   return res.json(answer);
 });
 
-const server = app.listen(3500, function () {
+const server = app.listen(process.env.PORT || 5000, function () {
   let host = server.address().address;
   let port = server.address().port;
 });
